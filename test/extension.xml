@@ -1,0 +1,12 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:x="http://example.org/x" entityID="https://example.org/">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <mdui:UIInfo>
+	<!-- missing required attribute "width" -->
+        <mdui:Logo height="0" xml:lang="en">http://www.example.com/</mdui:Logo>
+      </mdui:UIInfo>
+      <x:X/>
+    </md:Extensions>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://example.org/sso"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>

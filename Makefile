@@ -25,5 +25,13 @@ xsd/xmldsig-core-schema.xsd:
 	mkdir -p xsd
 	wget -Oxsd/xmldsig-core-schema.xsd http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd
 
+xsd/ws-federation.xsd:
+	mkdir -p xsd
+	wget -Oxsd/ws-federation.xsd http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation.xsd
+
+xsd/ws-authorization.xsd:
+	mkdir -p xsd
+	wget -Oxsd/ws-authorization.xsd http://schemas.xmlsoap.org/ws/2006/12/authorization/ws-authorization.xsd
+
 clean:
 	rm xcatalog/saml-metadata.xml
