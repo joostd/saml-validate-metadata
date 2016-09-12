@@ -5,7 +5,7 @@ saml-2.0-os:
 	wget http://docs.oasis-open.org/security/saml/v2.0/saml-2.0-os.zip
 	unzip -d saml-2.0-os saml-2.0-os.zip *.xsd
 
-xcatalog/saml-metadata.xml: xsd/xml.xsd xsd/xenc-schema.xsd xsd/xmldsig-core-schema.xsd xsd/ws-federation.xsd
+xcatalog/saml-metadata.xml: xsd/xml.xsd xsd/xenc-schema.xsd xsd/xmldsig-core-schema.xsd
 	mkdir -p xcatalog
 	xmlcatalog --noout --create	\
 	--add uri http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd	 ../xsd/xmldsig-core-schema.xsd	 \
@@ -14,6 +14,7 @@ xcatalog/saml-metadata.xml: xsd/xml.xsd xsd/xenc-schema.xsd xsd/xmldsig-core-sch
 	xcatalog/saml-metadata.xml
 
 xsd/xml.xsd:
+	mkdir -p xsd
 	wget -Oxsd/xml.xsd http://www.w3.org/2001/xml.xsd
 
 xsd/xenc-schema.xsd:
